@@ -25,7 +25,6 @@ Nodes *create()
         node = (Nodes *)malloc(sizeof(Nodes));
         node->data = data;
         node->next = NULL;
-        node->pre = NULL;
 
         if(head == NULL)
         {
@@ -35,7 +34,6 @@ Nodes *create()
         else
         {
             temp->next = node;
-            node->pre = temp;
             temp = node;
         }
     }
