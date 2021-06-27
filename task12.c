@@ -16,7 +16,12 @@ int isEmpty(){
 void push(int data){
     stack *node = (stack *)malloc(sizeof(stack));
     node->data = data;
-    node->next = top;
+    if(top == NULL){
+        node->next = NULL;
+    }
+    else{
+         node->next = top;
+    }
     top = node;
 }
 
