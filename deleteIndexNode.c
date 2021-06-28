@@ -52,13 +52,11 @@ void read()
     }
 }
 
-void delIndex(){
+void delIndex(int n){
     Nodes *temp,*temp2;
     temp = head;
-    int n,count=1;
+    int count=1;
 
-    printf("\nEnter which index you want to delete\n");
-    scanf("%d",&n);
     if(n==1){
         head = head->next;
         free(temp);
@@ -79,10 +77,13 @@ void delIndex(){
 
 int main()
 {
-
+    int n;
     create();
     read();
-    delIndex();
+
+    printf("\nEnter which index you want to delete\n");
+    scanf("%d",&n);
+    delIndex(n);
     read();
     return 0;
 
