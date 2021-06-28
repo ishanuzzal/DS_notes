@@ -9,7 +9,7 @@ typedef struct Nodelist
 
 Nodes *head = NULL;
 
-Nodes *create()
+Nodes create()
 {
     int i,n,data;
     Nodes *node,*temp;
@@ -36,7 +36,6 @@ Nodes *create()
             temp = node;
         }
     }
-    return head;
 
 }
 
