@@ -9,7 +9,7 @@ typedef struct Nodelist
 
 Nodes *head = NULL;
 
-Nodes *create()
+void create()
 {
     int i,n,data;
     Nodes *node,*temp;
@@ -36,8 +36,6 @@ Nodes *create()
             temp = node;
         }
     }
-    return head;
-
 }
 
 void read()
@@ -52,13 +50,9 @@ void read()
     }
 }
 
-void insertFirst()
+void insertFirst(int data)
 {
-    int n,data,count=1;
     Nodes *node;
-    printf("\nEnter 1st node data\n");
-    scanf("%d",&data);
-
     node = (Nodes *)malloc(sizeof(Nodes));
     node->data = data;
     node->next = NULL;
@@ -67,15 +61,11 @@ void insertFirst()
     head = node;
 }
 
-void insertLast()
+void insertLast(int data)
 {
     Nodes *temp, *node;
 
     temp = head;
-
-    int data;
-    printf("\nEnter last node data\n");
-    scanf("%d",&data);
 
     node = (Nodes *)malloc(sizeof(Nodes));
     node->data = data;
@@ -92,11 +82,15 @@ void insertLast()
 
 int main()
 {
-
+    int first,last;
     create();
     read();
-    insertFirst();
-    insertLast();
+    printf("\nEnter first node data\n");
+    scanf("%d",&first);
+    printf("\nEnter the last node\n");
+    scanf("%d",&last);
+    insertFirst(first);
+    insertLast(last);
     read();
     return 0;
 
