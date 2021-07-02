@@ -9,13 +9,16 @@ typedef struct Nodelist
 }nodes;
 
 nodes *head = NULL;
+nodes *last = NULL;
+int size = -1;
 
-nodes create()
+void create()
 {
     int i,n,data;
     nodes *node,*temp;
     printf("How many nodes you want to create\n");
     scanf("%d",&n);
+    size = n;
     for(i=1; i<=n; i++)
     {
         printf("Enter node %d data: ",i);
@@ -38,6 +41,7 @@ nodes create()
             temp = node;
         }
     }
+    last = temp;
 
 }
 
@@ -60,12 +64,17 @@ void insertIndex(int data,int index){
     node = (nodes *)malloc(sizeof(nodes));
     node->data = data;
     node->next = NULL;
+    node->pre = NULL;
 
     if(index==1){
         node->pre = NULL;
         node->next = temp;
         temp->pre = node;
         head = node;
+    }
+    else if(index == size+1){
+        last->next = node;
+        node->pre = last;
     }
     else{
 
@@ -91,7 +100,7 @@ int main()
     int data;
     create();
     read();
-    insertIndex(15,4);
+    insertIndex(15,5);
     read();
     return 0;
 
