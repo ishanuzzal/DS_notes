@@ -11,7 +11,6 @@
 
 7. Delete first and last index of a singly linked list
 
-
 9. Print reversely singly linked list
 
 10. display doubly linked list
@@ -21,3 +20,7 @@
 12. stack implementation 
 
 13. queue implementation
+
+14. insert nth index node in singly linked list
+
+15. delete nth index in singly linked list 
