@@ -63,7 +63,8 @@ void insertIndex(int data,int index){
     node->next = NULL;
 
     if(index>size+1 || index<=0){
-
+        printf("Input valid index");
+        return;
     }
     //insert in 1st index
     if(index == 1){
