@@ -1,6 +1,6 @@
 # DS_notes
-|1. Search a value index in singly linked list
-|2. insert first node and last node in doubly linked list
+|*1. Search a value index in singly linked list*
+|*2. insert first node and last node in doubly linked list.*
 3. insert nth index node in doubly linked list
 5. delete nth index node in doubly linked list
 6. insert first and last index singly linked list
